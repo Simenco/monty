@@ -52,6 +52,12 @@ extern int malloc_error(void);
 extern int f_open_error(char *filename);
 extern int unknown_op_error(char *opcode, unsigned int line_num);
 extern int no_int_error(unsigned int line_num);
+extern int short_stack_error(unsigned int line_num, char *op);
+extern int div_error(unsigned int line_num);
+extern int pop_error(unsigned int line_num);
+extern int div_error(unsigned int line_num);
+extern int pchar_error(unsigned int line_num, char *message)
+
 
 extern void monty_push(stack_t **stack, unsigned int line_num);
 extern void monty_pall(stack_t **stack, unsigned int line_num);
