@@ -9,6 +9,13 @@
 #define STACK 0
 #define QUEUE 1
 
+extern void free_tokens(void);
+extern unsigned int token_arr_len(void);
+extern int check_empty_line(char *line, char *delims);
+extern void (*get_op_func(char *opcode))(stack_t**, unsigned int);
+extern int run_monty(FILE *file_d);
+
+
 extern char **opcode_t;
 
 /**
