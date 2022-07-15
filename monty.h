@@ -27,6 +27,9 @@ extern void monty_sub(stack_t **stack, unsigned int line_num);
 extern void monty_div(stack_t **stack, unsigned int line_num);
 extern void monty_mul(stack_t **stack, unsigned int line_num);
 extern void monty_mod(stack_t **stack, unsigned int line_num);
+extern void monty_nop(stack_t **stack, unsigned int line_num);
+extern void monty_pchar(stack_t **stack, unsigned int line_num);
+extern void monty_pstr(stack_t **stack, unsigned int line_num);
 
 
 /**
