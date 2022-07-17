@@ -78,4 +78,19 @@ void bottom_top(stack_t **stack, unsigned int line_num);
 void monty_que_stack(stack_t **stack, unsigned int line_num);
 void monty_satck_que(stack_t **stack, unsigned int line_num);
 
+char *get_int(int num);
+unsigned int _abs(int);
+int get_numbase_len(unsigned int num, unsigned int base);
+void fill_numbase_buff(unsigned int num, unsigned int base, char *buff, int buff_size);
+
+char **strtow(char *str, char *delims);
+int is_delim(char ch, char *delims);
+int get_word_length(char *str, char *delims);
+int get_word_count(char *str, char *delims);
+char *get_next_word(char *str, char *delims);
+
+void free_stack(stack_t **stack);
+int init_stack(stack_t **stack);
+int check_mode(stack_t *stack);
+
 #endif
