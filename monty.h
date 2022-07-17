@@ -73,4 +73,9 @@ extern void monty_nop(stack_t **stack, unsigned int line_num);
 extern void monty_pchar(stack_t **stack, unsigned int line_num);
 extern void monty_pstr(stack_t **stack, unsigned int line_num);
 
+void top_bottom(stack_t **stack, unsigned int line_num);
+void bottom_top(stack_t **stack, unsigned int line_num);
+void monty_que_stack(stack_t **stack, unsigned int line_num);
+void monty_satck_que(stack_t **stack, unsigned int line_num);
+
 #endif
