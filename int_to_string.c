@@ -3,7 +3,8 @@
 char *get_int(int num);
 unsigned int _abs(int);
 int get_numbase_len(unsigned int num, unsigned int base);
-void fill_numbase_buff(unsigned int num, unsigned int base, char *buff, int buff_size);
+void fill_numbase_buff(unsigned int num, unsigned int base,
+		       char *buff, int buff_size);
 
 /**
  * get_int - gets a character pointer to new string containing int
@@ -76,7 +77,7 @@ int get_numbase_len(unsigned int num, unsigned int base)
  * Return: always void.
  */
 void fill_numbase_buff(unsigned int num, unsigned int base,
-		char *buff, int buff_size)
+			char *buff, int buff_size)
 {
 	int rem, i = buff_size - 1;
 

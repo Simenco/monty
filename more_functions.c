@@ -1,17 +1,16 @@
 #include "monty.h"
 
-void top_bottom(stack_t **stack, unsigned int line_num);
-void bottom_top(stack_t **stack, unsigned int line_num);
-void monty_que_stack(stack_t **stack, unsigned int line_num);
-void monty_satck_que(stack_t **stack, unsigned int line_num);
+void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
+void monty_stack(stack_t **stack, unsigned int line_number);
+void monty_queue(stack_t **stack, unsigned int line_number);
 
 /**
- * top_bottom - changes the top value of a stack_t linked_listto bottom
- * @stack: poiter to the top node of a stack linked_list
- * @line_num: the current working line number of a monty bytecode
+ * monty_rotl - Rotates the top value of a stack_t linked list to the bottom.
+ * @stack: A pointer to the top mode node of a stack_t linked list.
+ * @line_number: The current working line number of a Monty bytecodes file.
  */
-
-void top_bottom(stack_t **stack, unsigned int line_num)
+void monty_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
@@ -29,16 +28,15 @@ void top_bottom(stack_t **stack, unsigned int line_num)
 	top->next = NULL;
 	top->prev = bottom;
 
-	(void)line_num;
+	(void)line_number;
 }
 
 /**
- * bottom_top - changes the bottom value of a linked list to top
- * @stack: pointer to the top node
- * @line_num: current working line number of a monty bytecode
+ * monty_rotr - Rotates the bottom value of a stack_t linked list to the top.
+ * @stack: A pointer to the top mode node of a stack_t linked list.
+ * @line_number: The current working line number of a Monty bytecodes file.
  */
-
-void bottom_top(stack_t **stack, unsigned int line_num)
+void monty_rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
@@ -56,29 +54,27 @@ void bottom_top(stack_t **stack, unsigned int line_num)
 	bottom->next = top;
 	top->prev = bottom;
 
-	(void)line_num;
+	(void)line_number;
 }
 
 /**
- * monty_que_stack - converts a queue to a stack
- * @stack: pointer to the top node of a stack linked list
- * @line_num: the current working line number of a monty bytecode
+ * monty_stack - Converts a queue to a stack.
+ * @stack: A pointer to the top mode node of a stack_t linked list.
+ * @line_number: The current working line number of a Monty bytecodes file.
  */
-
-void monty_que_stack(stack_t **stack, unsigned int line_num)
+void monty_stack(stack_t **stack, unsigned int line_number)
 {
 	(*stack)->n = STACK;
 	(void)line_number;
 }
 
 /**
- * monty_stack_que - converts a stack to a queue
- * @stack: pointer to the top node of a stack linked list
- * @line_num: the current working line number of a monty bytecode
+ * monty_queue - Converts a stack to a queue.
+ * @stack: A pointer to the top mode node of a stack_t linked list.
+ * @line_number: The current working line number of a Monty bytecodes file.
  */
-
-void monty_stack_que(stack_t **stack, unsigned int line_num)
+void monty_queue(stack_t **stack, unsigned int line_number)
 {
-        (*stack)->n = QUEUE;
-        (void)line_number;
+	(*stack)->n = QUEUE;
+	(void)line_number;
 }
